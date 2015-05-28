@@ -43,15 +43,12 @@ imap <INS>  <esc><Ins>
 map <F2>        <esc>:tabnew .<Enter>
 imap <F2>  <esc>:tabnew .<Enter>i
 
-map <F4>    <esc>:q<Enter>
-imap <F4>  <esc>:q<Enter>i
 
-map <F5>    :set nonumber<Enter>
-map <F7>    :set number<Enter>
-imap <F8>   <esc>G=gg<Ins>
+
+
 map <F8>    G=gg
-nmap <F8> :TagbarToggle<CR>
 
+nmap <F6> :TagbarToggle<CR>
 map <F5> :WMToggle<cr>  
 "вкл/выкл 
 "let g:winManagerWidth=35    
