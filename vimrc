@@ -32,24 +32,7 @@ set nobackup
 "highlight lCursor guifg=NONE guibg=Cyan"
 
 filetype plugin indent on
-map <F11>   :tabprev<Enter>
-map <F12>   :tabnext<Enter>
 
-map <F6>   <esc>:w<Enter>
-imap <F6>   <esc>:w<Enter>i
-
-imap <INS>  <esc><Ins>
-
-map <F2>        <esc>:tabnew .<Enter>
-imap <F2>  <esc>:tabnew .<Enter>i
-
-
-
-
-map <F8>    G=gg
-
-nmap <F6> :TagbarToggle<CR>
-map <F5> :WMToggle<cr>  
 "вкл/выкл 
 "let g:winManagerWidth=35    
 " ширина
@@ -111,3 +94,27 @@ highlight Normal guibg=lightyellow
 "pasive ftp
 let g:netrw_ftp_cmd = 'pftp'
 set background=dark
+
+"настройки горячих клавиш
+"map в режиме команд
+"imap в режиме редактора
+map <F1>   :tabprev<Enter>
+map <F2>   :tabnext<Enter>
+
+"map <F6>   <esc>:w<Enter>
+"imap <F6>   <esc>:w<Enter>i
+"imap <INS>  <esc><Ins>
+
+"map <F2>        <esc>:tabnew .<Enter>
+"imap <F2>  <esc>:tabnew .<Enter>i
+"map <F4>    <esc>:q<Enter>
+"imap <F4>  <esc>:q<Enter>i
+
+
+map <F3> :WMToggle<cr>
+map <F4> :TagbarToggle<CR>
+
+map <F5> :! ./%
+map <F6> :!perl -d %<cr>
+map <F7> :!perl -cWT %<cr>
+
