@@ -114,7 +114,7 @@ map <F2>   :tabnext<Enter>
 map <F3> :WMToggle<cr>
 map <F4> :TagbarToggle<CR>
 
-map <F5> :! ./%
+map <F5> :! ./%<cr>
 map <F6> :!perl -d %<cr>
 map <F7> :!perl -cWT %<cr>
 
