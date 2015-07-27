@@ -64,9 +64,12 @@ abb class_ class <Esc>mai<CR>{<CR><CR>}<Esc>`ai
 abb ifelse_ if ( <Esc>mai )<CR>{<CR><CR>}<CR>else<CR>{<CR><CR>}<Esc>`ai
 abb <? <?php <Esc>mai ?><Esc>`ai
 
-set tabstop=4 shiftwidth=4 softtabstop=4
-set sw=4
-set ts=4
+"setings indent and tab
+" noexpandtab for normal tab
+set noexpandtab
+set tabstop=8 shiftwidth=4 softtabstop=4
+"set sw=4
+"set ts=4
 
 
 set showmatch " \xd0\xd2\xcf\xd7\xc5\xd2\xcb\xc1 \xd3\xcb\xcf\xc2\xcf\xcb
