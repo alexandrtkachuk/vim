@@ -120,6 +120,9 @@ map <F4> :TagbarToggle<CR>
 "map <F5> :! ./%<cr>
 map <F6> :!perl -d %<cr>
 map <F7> :!perl -cWT %<cr>
+map <F8> :! phpunit --verbose  --bootstrap autoLoad.php   %<cr>
+map <F9> :! phpunit   --bootstrap autoLoad.php --coverage-html ./infotest  %<cr>
+
 
 
 
