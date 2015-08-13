@@ -84,7 +84,7 @@ set number
 set ch=2
 
 match ErrorMsg '\%>79v.\+'
-2mat ErrorMsg /,[A-Za-z0-9$]/
+2mat ErrorMsg /,[A-Za-z0-9$'"]/
 
 
 
