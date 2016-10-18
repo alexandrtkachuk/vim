@@ -138,5 +138,19 @@ filetype plugin indent on     " обязательно!
 
 "репозитории на github
 
+"php
+Plugin 'stanangeloff/php.vim'
+Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'sumpygump/php-documentor-vim'
 
+"html and js
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+"others
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+
+"go to decloration
+map <C-]> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
