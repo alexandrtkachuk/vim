@@ -64,12 +64,10 @@ abb class_ class <Esc>mai<CR>{<CR><CR>}<Esc>`ai
 abb ifelse_ if ( <Esc>mai )<CR>{<CR><CR>}<CR>else<CR>{<CR><CR>}<Esc>`ai
 abb <? <?php <Esc>mai ?><Esc>`ai
 
-"setings indent and tab
-" noexpandtab for normal tab
-set noexpandtab
-set tabstop=8 shiftwidth=4 softtabstop=4
-"set sw=4
-"set ts=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 
 
 set showmatch " \xd0\xd2\xcf\xd7\xc5\xd2\xcb\xc1 \xd3\xcb\xcf\xc2\xcf\xcb
@@ -84,7 +82,7 @@ set number
 set ch=2
 
 match ErrorMsg '\%>79v.\+'
-2mat ErrorMsg /\(,[A-Za-z0-9$'"]\)\|\(  \)\|\([A-Za-z0-9$'")\]]=\)\|\(=[\[(A-Za-z0-9$'"]\)/
+"2mat ErrorMsg /\(,[A-Za-z0-9$'"]\)\|\(  \)\|\([A-Za-z0-9$'")\]]=\)\|\(=[\[(A-Za-z0-9$'"]\)/
 
 
 
@@ -125,6 +123,34 @@ map <F7> :!perl -cWT %<cr>
 map <F8> :! phpunit --verbose  --bootstrap autoLoad.php   %<cr>
 map <F9> :! phpunit   --bootstrap autoLoad.php --coverage-html ./infotest  %<cr>
 
+"settings for vundle
+
+set nocompatible
+
+"filetype off  “обязательно!
+
+set rtp+=~/.vim/bundle/Vundle.vim/
+
+call vundle#rc()
+
+filetype plugin indent on     " обязательно!
 
 
+"репозитории на github
+
+"php
+Plugin 'stanangeloff/php.vim'
+Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'sumpygump/php-documentor-vim'
+
+"html and js
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+"others
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+
+"go to decloration
+map <C-]> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
