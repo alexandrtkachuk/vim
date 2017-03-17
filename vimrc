@@ -149,7 +149,7 @@ Plugin 'pangloss/vim-javascript'
 "others
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-
+Plugin 'evidens/vim-twig'
 
 "go to decloration
 map <C-]> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
