@@ -148,8 +148,10 @@ Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 "others
 Plugin 'vim-scripts/ctags.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim' " need ctags install 
 Plugin 'evidens/vim-twig'
+Plugin 'Valloric/YouCompleteMe' "need install build-essential cmake
+
 
 "go to decloration
 map <C-]> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
