@@ -7,13 +7,10 @@ syntax on
 
 set expandtab
 "colors default"
-
+"
 syntax on
 set bg=dark
 set hlsearch
-highlight Search ctermfg=Black
-highlight StatusLine   term=NONE cterm=NONE ctermfg=white  ctermbg=blue
-highlight Comment ctermfg=Green guifg=LightBlue
 set incsearch
 set guifont=courier_new:h10:cRUSSIAN
 set laststatus=2
@@ -29,7 +26,7 @@ set nobackup
 "set guifont=-*-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-utf-8*
 "set encoding=utf-8
 
-"highlight lCursor guifg=NONE guibg=Cyan"
+
 
 filetype plugin indent on
 
@@ -86,12 +83,6 @@ match ErrorMsg '\%>79v.\+'
 
 
 
-
-highlight Cursor guibg=Green guifg=NONE
-highlight NonText guibg=grey80
-highlight Constant gui=NONE guibg=grey95
-highlight Special gui=NONE guibg=grey95
-highlight Normal guibg=lightyellow
 
 
 "pasive ftp
@@ -151,8 +142,79 @@ Plugin 'vim-scripts/ctags.vim'
 Plugin 'ctrlpvim/ctrlp.vim' " need ctags install 
 Plugin 'evidens/vim-twig'
 Plugin 'Valloric/YouCompleteMe' "need install build-essential cmake
+Plugin 'vim-syntastic/syntastic' "syntax
+"к темам нужны шрифты: https://github.com/powerline/fonts
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+
+"далее пишем прочие настройки
+"количество цветов
+set t_Co=256
+"// solarized не входит в стандартную поставку, необходимо загрузить набор тем
+let g:airline_theme='durant'
+
+"// использовать пропатченные шрифты
+"let g:airline_powerline_fonts = 1
+
+"// включить управление табами
+let g:airline#extensions#tabline#enabled = 1
+
+"// всегда показывать tabline
+let g:airline#extensions#tabline#tab_min_count = 0
+
+"// такое же поведение, как и в sublime: если файл с уникальным именем - показывается только имя, если встречается файл с таким же именем, отображается также и директория
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+"// скрыть буферы
+let g:airline#extensions#tabline#show_buffers = 0
+
+"// имя файла + расширение :help filename-modifiers
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+"// убираем раздражающие ненужные красные панели с предупреждениями или ошибками. Предупреждения, как по мне, не нужны, поскольку ругаются даже на trailing-spaces 
+"и разные отступы: например табы и пробелы (привет от phpDoc). Для ошибок и так открывается дополнительное окно. Впрочем, вам решать.
+let g:airline_section_warning = ''
+let g:airline_section_error = ''
+
+"// убираем "X" для закрытия вкладки мышью (мышью!?)
+let g:airline#extensions#tabline#show_close_button = 0
+
+"// убираем разделитель для вкладок
+"let g:airline#extensions#tabline#left_alt_sep = ''
+
+"// отключаем tagbar
+let g:airline#extensions#tagbar#enabled = 0
+
+"// показывать номер вкладки
+let g:airline#extensions#tabline#show_tab_nr = 1
+
+"// показывать только номер вкладки
+let g:airline#extensions#tabline#tab_nr_type = 1
+
+
+"set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+
+ 
+
 
 
 "go to decloration
 map <C-]> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+
+"подстветка и прочее
+"ctermfg=цвет текста 
+"ctermbg=цвет фона
+"cterm  = тип текста, типа курсив и т.д
+
+highlight phpKeyword ctermfg=yellow
+highlight phpClass ctermfg=DarkMagenta "имя класса, также от которого наследуеться 
+highlight phpClassImplements ctermfg=Magenta
+highlight phpIdentifier ctermfg=lightBlue "имя переменных 
+highlight phpType ctermfg=Green "значения типа public, class и.д.
+highlight phpMethod ctermfg=Green
+highlight phpFunction ctermfg=Green
+
+
 
