@@ -82,9 +82,6 @@ match ErrorMsg '\%>79v.\+'
 "2mat ErrorMsg /\(,[A-Za-z0-9$'"]\)\|\(  \)\|\([A-Za-z0-9$'")\]]=\)\|\(=[\[(A-Za-z0-9$'"]\)/
 
 
-
-
-
 "pasive ftp
 let g:netrw_ftp_cmd = 'pftp'
 set background=dark
@@ -137,7 +134,11 @@ Plugin 'sumpygump/php-documentor-vim'
 "html and js
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
-"others
+
+"python
+Plugin 'python-mode/python-mode'
+
+"other
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'ctrlpvim/ctrlp.vim' " need ctags install 
 Plugin 'evidens/vim-twig'
