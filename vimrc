@@ -102,7 +102,7 @@ map <F2>   :tabnext<Enter>
 "imap <F4>  <esc>:q<Enter>i
 
 
-map <F3> :WMToggle<cr>
+map <F3> :NERDTreeToggle<cr>
 map <F4> :TagbarToggle<CR>
 
 "map <F5> :! ./%<cr>
@@ -112,6 +112,8 @@ map <F8> :! phpunit --verbose  --bootstrap autoLoad.php   %<cr>
 map <F9> :! phpunit   --bootstrap autoLoad.php --coverage-html ./infotest  %<cr>
 
 "install vundle git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
 "settings for vundle
 
 set nocompatible
@@ -126,6 +128,7 @@ filetype plugin indent on     " обязательно!
 
 
 "репозитории на github
+Plugin 'gmarik/Vundle.vim' "чтоб не удалялся
 
 "php
 Plugin 'stanangeloff/php.vim'
@@ -141,7 +144,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'klen/python-mode'            " Python mode (docs, refactor, lints,
 "highlighting, run and ipdb and more)
 Plugin 'davidhalter/jedi-vim'        " Jedi-vim autocomplete plugin
-Plugin 'mitsuhiko/vim-jinja'     " Jinja support for vim
 Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
 
 "other
@@ -153,7 +155,8 @@ Plugin 'vim-syntastic/syntastic' "syntax
 "к темам нужны шрифты: https://github.com/powerline/fonts
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
+Plugin 'scrooloose/nerdtree'            " Project and file navigation
+Plugin 'majutsushi/tagbar'              " Class/module browser
 
 "далее пишем прочие настройки
 "количество цветов
