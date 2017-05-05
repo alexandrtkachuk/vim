@@ -204,8 +204,8 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 
 
 "set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-
- 
+let g:jedi#force_py_version = 2
+let g:jedi#completions_command = "<C-b>" 
 
 
 
