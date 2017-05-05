@@ -111,6 +111,7 @@ map <F7> :!perl -cWT %<cr>
 map <F8> :! phpunit --verbose  --bootstrap autoLoad.php   %<cr>
 map <F9> :! phpunit   --bootstrap autoLoad.php --coverage-html ./infotest  %<cr>
 
+"install vundle git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "settings for vundle
 
 set nocompatible
@@ -135,8 +136,13 @@ Plugin 'sumpygump/php-documentor-vim'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 
-"python
-Plugin 'python-mode/python-mode'
+
+" --- Python ---
+Plugin 'klen/python-mode'            " Python mode (docs, refactor, lints,
+"highlighting, run and ipdb and more)
+Plugin 'davidhalter/jedi-vim'        " Jedi-vim autocomplete plugin
+Plugin 'mitsuhiko/vim-jinja'     " Jinja support for vim
+Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
 
 "other
 Plugin 'vim-scripts/ctags.vim'
