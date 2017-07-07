@@ -141,77 +141,28 @@ Plugin 'pangloss/vim-javascript'
 
 
 " --- Python ---
-Plugin 'klen/python-mode'            " Python mode (docs, refactor, lints,
+"Plugin 'klen/python-mode'            " Python mode (docs, refactor, lints,
 "highlighting, run and ipdb and more)
-Plugin 'davidhalter/jedi-vim'        " Jedi-vim autocomplete plugin
-Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
+"Plugin 'davidhalter/jedi-vim'        " Jedi-vim autocomplete plugin
+"Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
 
+"-------Perl---------
+Plugin 'vim-perl/vim-perl'
 "other
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'ctrlpvim/ctrlp.vim' " need ctags install 
 Plugin 'evidens/vim-twig'
 Plugin 'Valloric/YouCompleteMe' "need install build-essential cmake
-Plugin 'vim-syntastic/syntastic' "syntax
+"Plugin 'vim-syntastic/syntastic' "syntax
 "к темам нужны шрифты: https://github.com/powerline/fonts
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'            " Project and file navigation
 Plugin 'majutsushi/tagbar'              " Class/module browser
 
-"далее пишем прочие настройки
-"количество цветов
-set t_Co=256
-"// solarized не входит в стандартную поставку, необходимо загрузить набор тем
-let g:airline_theme='durant'
 
-"// использовать пропатченные шрифты
-"let g:airline_powerline_fonts = 1
-
-"// включить управление табами
-let g:airline#extensions#tabline#enabled = 1
-
-"// всегда показывать tabline
-let g:airline#extensions#tabline#tab_min_count = 0
-
-"// такое же поведение, как и в sublime: если файл с уникальным именем - показывается только имя, если встречается файл с таким же именем, отображается также и директория
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-"// скрыть буферы
-let g:airline#extensions#tabline#show_buffers = 0
-
-"// имя файла + расширение :help filename-modifiers
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-"// убираем раздражающие ненужные красные панели с предупреждениями или ошибками. Предупреждения, как по мне, не нужны, поскольку ругаются даже на trailing-spaces 
-"и разные отступы: например табы и пробелы (привет от phpDoc). Для ошибок и так открывается дополнительное окно. Впрочем, вам решать.
-let g:airline_section_warning = ''
-let g:airline_section_error = ''
-
-"// убираем "X" для закрытия вкладки мышью (мышью!?)
-let g:airline#extensions#tabline#show_close_button = 0
-
-"// убираем разделитель для вкладок
-"let g:airline#extensions#tabline#left_alt_sep = ''
-
-"// отключаем tagbar
-let g:airline#extensions#tagbar#enabled = 0
-
-"// показывать номер вкладки
-let g:airline#extensions#tabline#show_tab_nr = 1
-
-"// показывать только номер вкладки
-let g:airline#extensions#tabline#tab_nr_type = 1
-
-
-"set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-let g:jedi#force_py_version = 2
-let g:jedi#completions_command = "<C-b>" 
-
-
-
-"go to decloration
-map <C-]> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 "подстветка и прочее
 "ctermfg=цвет текста 
