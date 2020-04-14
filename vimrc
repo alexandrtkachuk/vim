@@ -152,7 +152,7 @@ Plugin 'vim-perl/vim-perl'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'ctrlpvim/ctrlp.vim' " need ctags install 
 Plugin 'evidens/vim-twig'
-Plugin 'Valloric/YouCompleteMe' "need install build-essential cmake
+"Plugin 'Valloric/YouCompleteMe' "need install build-essential cmake
 "Plugin 'vim-syntastic/syntastic' "syntax
 "к темам нужны шрифты: https://github.com/powerline/fonts
 "Plugin 'vim-airline/vim-airline'
